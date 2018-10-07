@@ -6,6 +6,7 @@
 package model;
 
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -49,11 +50,21 @@ public class RumahSakit {
     }
 
     public void tambahKlinik(Klinik klinik) {
-        daftarKlinik.add(klinik);
+        if (cariKLinik(klinik.getNamaKlinik()) == -1) {
+            daftarKlinik.add(klinik);
+        }else{
+            JOptionPane.showMessageDialog(null, "Klinik sudah ada");
+        }
+        
     }
 
     public void tambahDokter(Dokter dokter) {
-        daftarDokter.add(dokter);
+        if (cariDokter(dokter.getNama()) == -1) {
+            daftarDokter.add(dokter);
+        }else{
+            JOptionPane.showMessageDialog(null, "Dokter sudah ada");
+        }
+        
     }
 
     public int cariDokter(String nama) {
