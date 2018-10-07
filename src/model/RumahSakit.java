@@ -58,7 +58,7 @@ public class RumahSakit {
 
     public int cariDokter(String nama) {
         for (int i = 0; i < daftarDokter.size(); i++) {
-            if (daftarDokter.get(i).getNama().equalsIgnoreCase(nama)) {
+            if (nama.equalsIgnoreCase(daftarDokter.get(i).getNama())) {
                 return i;
             }
         }
@@ -67,7 +67,7 @@ public class RumahSakit {
 
     public int cariKLinik(String nama) {
         for (int i = 0; i < daftarKlinik.size(); i++) {
-            if (daftarKlinik.get(i).getNamaKlinik().equalsIgnoreCase(nama)) {
+            if (nama.equalsIgnoreCase(daftarKlinik.get(i).getNamaKlinik())) {
                 return i;
             }
         }
